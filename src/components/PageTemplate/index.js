@@ -4,10 +4,15 @@ import Nav from '../Nav'
 import Info from '../Info'
 
 function PageTemplate({ children }) {
+  const display = true
+  const handleClick = (event) => {
+
+  }
+
   return (
     <div>
-      <Nav />
-      <Info />
+      <Nav/>
+      <Info/>
       {children}
     </div>
   )
