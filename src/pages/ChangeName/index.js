@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { string, func } from 'prop-types'
 import { changeName } from '../../store/actions'
 import PageTemplate from '../../components/PageTemplate'
+import HiddenContentShow from '../../components/HiddenContent'
+
 
 function ChangeNamePage({ name, change }) {
   return (
@@ -13,6 +15,7 @@ function ChangeNamePage({ name, change }) {
         type="text"
         onChange={(e) => change(e.target.value)}
       />
+      <HiddenContentShow />
     </PageTemplate>
   )
 }

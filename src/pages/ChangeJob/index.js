@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { string, func } from 'prop-types'
 import { changeJob } from '../../store/actions'
 import PageTemplate from '../../components/PageTemplate'
+import HiddenContent from '../../components/HiddenContent'
 
 function ChangeJob({ job, change }) {
   return (
@@ -13,6 +14,7 @@ function ChangeJob({ job, change }) {
         type="text"
         onChange={(e) => change(e.target.value)}
       />
+      <HiddenContent />
     </PageTemplate>
   )
 }
