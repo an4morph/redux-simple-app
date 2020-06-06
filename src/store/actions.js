@@ -12,3 +12,7 @@ export const changeAge = (age) => ({
   type: 'CHANGE_AGE',
   age,
 })
+export const changeAct = (act) => ({
+  type: 'CHANGE_CONTENT',
+  act,
+})
