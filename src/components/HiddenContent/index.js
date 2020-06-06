@@ -3,23 +3,35 @@ import style from './hidden-content.module.css'
 import { connect } from 'react-redux'
 import { changeAct } from '../../store/actions'
 
-function HiddenContent({ act, change }) {
+function HiddenContent({ act, change, age }) {
+  console.log(act)
   return (
     <div>
       <button
-        style={act === 'block' ? { display: 'none' } : { display: 'block' }}
-        onClick={() => change('block')}
+        style={
+          age >= 18 ?
+            act === 'block' ?
+              { display: 'none' } :
+              { display: 'block' } :
+            { display: 'block' }}
+        onClick={() => {
+          if ( age < 18 ) alert('Вам нет 18!')
+          return change('block')
+        }}
       >
         show
       </button>
 
       <button
-        style={{ display: act }}
-        onClick={() => change('none')}
+        style={age >= 18 ? { display: act } : { display: 'none' }}
+        onClick={() => {
+          if (age < 18) alert('Вам нет 18!')
+          return change('none')
+        }}
       >
         hide
       </button>
-      <div style={{ display: act }}>
+      <div style={age >= 18 ? { display: act } : { display: 'none' }}>
         hidden content
       </div>
     </div>
@@ -28,6 +40,7 @@ function HiddenContent({ act, change }) {
 
 const mapStateToProps = (state) => ({
   act: state.act,
+  age: state.age
 })
 
 const mapDispatchToProps = (dispatch) => ({
