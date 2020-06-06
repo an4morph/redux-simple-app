@@ -9,6 +9,7 @@ function Info({ name, job, age }) {
     { id: 2, text: `Your job: ${job}` },
     { id: 3, text: `Your age: ${age}` },
   ]
+
   return (
     <div className={styles.wrapper}>
       {
