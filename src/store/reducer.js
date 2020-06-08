@@ -17,9 +17,15 @@ const reducer = (state = initialState, action) => {
         ...state,
         job: action.job,
       }
+    case 'SHOW_BLOCK':
+      return {
+        ...state,
+        showBlock: action.showBlock,
+      }
     default:
       return state
   }
 }
 
 export default reducer
+

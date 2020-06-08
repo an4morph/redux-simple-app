@@ -12,3 +12,8 @@ export const changeAge = (age) => ({
   type: 'CHANGE_AGE',
   age,
 })
+
+export const hiddenContent = (showBlock) => ({
+  type: 'SHOW_BLOCK',
+  showBlock,
+})

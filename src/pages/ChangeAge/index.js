@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { func, number } from 'prop-types'
 import { changeAge } from '../../store/actions'
 import PageTemplate from '../../components/PageTemplate'
+import HiddenContent from '../../components/HiddenContent'
 
 function ChangeAgePage({ age, change }) {
   return (
@@ -13,6 +14,7 @@ function ChangeAgePage({ age, change }) {
         type="number"
         onChange={(e) => change(Number(e.target.value))}
       />
+      <HiddenContent />
     </PageTemplate>
   )
 }
