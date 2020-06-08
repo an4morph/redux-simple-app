@@ -17,6 +17,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         job: action.job,
       }
+    case 'CHANGE_CONTENT':
+      return {
+        ...state,
+        act: action.act,
+      }
     default:
       return state
   }
