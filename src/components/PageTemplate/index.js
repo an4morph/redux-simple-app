@@ -2,6 +2,7 @@ import React from 'react'
 import { node } from 'prop-types'
 import Nav from '../Nav'
 import Info from '../Info'
+import HiddenContent from '../HiddenContent'
 
 function PageTemplate({ children }) {
   return (
@@ -9,6 +10,7 @@ function PageTemplate({ children }) {
       <Nav />
       <Info />
       {children}
+      <HiddenContent />
     </div>
   )
 }

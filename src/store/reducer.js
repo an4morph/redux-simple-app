@@ -2,6 +2,8 @@ const initialState = {
   name: '',
   age: 0,
   job: '',
+
+  isShow: false,
 }
 
 
@@ -21,6 +23,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         job: action.job,
+      }
+    case 'TOGGLE_HIDDEN_CONTENT':
+      return {
+        ...state,
+        isShow: !state.isShow,
       }
     default:
       return state
