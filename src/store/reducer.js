@@ -1,4 +1,9 @@
-import initialState from './initialState'
+const initialState = {
+  name: '',
+  age: 0,
+  job: '',
+}
+
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
