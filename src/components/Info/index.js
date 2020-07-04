@@ -31,9 +31,9 @@ Info.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-  name: state.name,
-  job: state.job,
-  age: state.age,
+  name:state.forms.name,
+  job: state.forms.job,
+  age: state.forms.age,
 })
 
 export default connect(mapStateToProps)(Info)

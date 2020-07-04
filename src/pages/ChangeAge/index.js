@@ -23,7 +23,7 @@ ChangeAgePage.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-  age: state.age,
+  age: state.forms.age,
 })
 
 const mapDispatchToProps = (dispatch) => ({

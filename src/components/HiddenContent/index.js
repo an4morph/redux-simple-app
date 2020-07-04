@@ -1,15 +1,39 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { toggleHiddenContent } from '../../store/actions'
+import { bool, func } from 'prop-types'
 
-const HiddenContent = () => {
-    const [active, setActive] = React.useState(false)
+const HiddenContent = ( {isShow, toggle} ) => {
     return (
         <div>
-            <button onClick={() => setActive(!active)}>
-                {active ? 'hide' : 'show'}
+            <button
+            onClick={toggle}
+            type="button"
+            >
+                { isShow ? 'Hide' : 'Show' }
             </button>
-            {active && <div>this is hidden content</div>}
+            {
+                isShow &&(
+                    <div>
+                        HiddenContent
+                    </div>
+                )
+            }
         </div>
     )
 }
 
-export default HiddenContent
+HiddenContent.propTypes = {
+    isShow: bool.isRequired,
+    toggle: func.isRequired
+}
+
+const mapStateToProps = (state) => ({
+    isShow: state.btn.isShow
+})
+
+const mapDispatchToToProps = (dispatch) => ({
+    toggle: () => dispatch(toggleHiddenContent())
+})
+
+export default connect(mapStateToProps, mapDispatchToToProps)(HiddenContent)
