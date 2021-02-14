@@ -23,7 +23,7 @@ ChangeNamePage.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-  name: state.name,
+  name: state.forms.name,
 })
 
 const mapDispatchToProps = (dispatch) => ({

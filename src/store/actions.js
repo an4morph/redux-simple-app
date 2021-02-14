@@ -12,3 +12,8 @@ export const changeAge = (age) => ({
   type: 'CHANGE_AGE',
   age,
 })
+
+
+export const toggleHiddenContent = () => ({
+  type: 'TOGGLE_HIDDEN_CONTENT'
+})

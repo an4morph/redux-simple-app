@@ -23,7 +23,7 @@ ChangeJob.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-  job: state.job,
+  job: state.forms.job,
 })
 
 const mapDispatchToProps = (dispatch) => ({
